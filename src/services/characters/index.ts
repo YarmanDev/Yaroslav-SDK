@@ -4,9 +4,13 @@ import { ICharacter } from "./character.types";
 
 const ENDPOINT = "character";
 
-export class Movies extends BaseService {
+export class Characters extends BaseService {
   constructor(config: Config) {
     super(ENDPOINT, config);
+  }
+
+  async getCharactersList() {
+    return this.getList<ICharacter>();
   }
 
   async getCharacterById(id: string) {
