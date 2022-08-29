@@ -1,3 +1,5 @@
+import fetch from "isomorphic-fetch";
+
 export interface Config {
   API_KEY: string;
   BASE_URL: string;
